@@ -20,7 +20,7 @@ const Features = () => {
   return (
     <motion.div ref={ref} style={{ scale: scaleProgress, opacity: opacityProgress}} className="flex relative mx-5 lg:mx-10 flex-col items-center mb-10">
       <Image  src={rocket} className="absolute h-full lg:h-[100vh] lg:mt-[-115px] items-center justify-center" />
-      <div className="bg-gradient-to-r from-[#001A41] to-[#00050B] opacity-50 backdrop-blur-md backdrop-brightness-110 backdrop-contrast-[50%] rounded-xl flex flex-col items-center z-10">
+      <div className="backdrop-blur-md backdrop-brightness-110 backdrop-contrast-[50%] rounded-xl flex flex-col items-center z-10">
         <h4 className="text-[32px] md:text-[52px] xl:text-[68px] font-medium">Features</h4>
         <p className="font-medium text-[12px] md:text-[16px] xl:text-20px mb-5"><span className="text-[#0067FF]">Rocket Core</span> advanced features</p>
         <div className="flex flex-wrap justify-evenly">
