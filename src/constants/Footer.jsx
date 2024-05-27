@@ -1,3 +1,5 @@
+'use client'
+import { motion } from "framer-motion"
 import Image from "next/image"
 import top from "../../public/assets/top.svg"
 import Link from "next/link"
@@ -15,7 +17,7 @@ const Footer = () => {
                 <a href="" className="text-[12px] lg:text-[16px]">Join Telegram</a>
             </div>
             <Link href="/">
-                <div id="back-to-top" className="items-center cursor-pointer pt-3 lg:pt-0">
+                <div id="back-to-top" className="items-center cursor-pointer pt-3 lg:pt-0 w-6 lg:w-10">
                     <Image src={top} />
                 </div>
             </Link>

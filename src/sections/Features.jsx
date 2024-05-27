@@ -1,14 +1,25 @@
+'use client'
+import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import rocket from "../../public/assets/features-rocket.svg"
 import set from "../../public/assets/set.svg"
 import light from "../../public/assets/light.svg"
 import UI from "../../public/assets/UI.svg"
 import sim from "../../public/assets/sim.svg"
+import { useRef } from "react"
 
 const Features = () => {
+  const ref = useRef(null)
+  const { scrollYProgress} = useScroll({
+    target: ref,
+    offset : ["0 1", "0.7 1"]
+  })
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
-    <div className="flex relative mx-5 lg:mx-10 flex-col items-center mb-10">
-      <Image src={rocket} className="absolute h-full lg:h-[100vh] lg:mt-[-115px] items-center justify-center" />
+    <motion.div ref={ref} style={{ scale: scaleProgress, opacity: opacityProgress}} className="flex relative mx-5 lg:mx-10 flex-col items-center mb-10">
+      <Image  src={rocket} className="absolute h-full lg:h-[100vh] lg:mt-[-115px] items-center justify-center" />
       <div className="bg-gradient-to-r from-[#001A41] to-[#00050B] opacity-50 backdrop-blur-md backdrop-brightness-110 backdrop-contrast-[50%] rounded-xl flex flex-col items-center z-10">
         <h4 className="text-[32px] md:text-[52px] xl:text-[68px] font-medium">Features</h4>
         <p className="font-medium text-[12px] md:text-[16px] xl:text-20px mb-5"><span className="text-[#0067FF]">Rocket Core</span> advanced features</p>
@@ -43,7 +54,7 @@ const Features = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
