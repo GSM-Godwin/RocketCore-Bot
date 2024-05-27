@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image"
 import telegram from "../../public/assets/hero-telegram.svg"
-import rocket from "../../public/assets/hero-rocket.svg"
+import rocket from "../../public/assets/herorocket.svg"
 import telegrambg from "../../public/assets/hero-telegram-bg.svg"
 import { motion, useScroll } from "framer-motion"
 import { useRef } from "react"
