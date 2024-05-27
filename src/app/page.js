@@ -6,7 +6,6 @@ import Hero from "@/sections/Hero";
 import Join from "@/sections/Join";
 import Partners from "@/sections/Partners";
 import Sss from "@/sections/Sss";
-import Image from "next/image";
 
 export default function Home() {
   return (
