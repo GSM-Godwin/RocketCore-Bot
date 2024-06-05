@@ -9,7 +9,7 @@ import Sss from "@/sections/Sss";
 
 export default function Home() {
   return (
-    <main className="md:px-10">
+    <main className="md:px-10 overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />
